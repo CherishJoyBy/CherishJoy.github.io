@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CherishJoy, By" />
+  <meta name="keywords" content="Java,反射," />
 
 
 
@@ -93,16 +93,17 @@
 
 
 
-<meta name="description" content="本文主要讲解反射的相关知识getClass()、class()、forName()getConstructors()、getDeclaredConstructors()、getConstructor()、getDeclaredConstructor()getMethods()、getDeclaredMethods()、getMethod()、getDeclaredMethod()getField">
+<meta name="description" content="本文主要讲解反射的相关知识  一.获取类对象 getClass()，class()，forName()  1.获取类对象可以使用以下三种方法 对象名调用getClass()方法 类名调用class()方法 Class调用forName()方法，参数是类所在的文件相对路径  例子：Peo类 123456789101112131415161718192021222324252627282930313">
+<meta name="keywords" content="Java,反射">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java知识之反射">
 <meta property="og:url" content="http://cherishJoy.com/2018/08/23/Java知识之反射/index.html">
 <meta property="og:site_name" content="CherishJoy">
-<meta property="og:description" content="本文主要讲解反射的相关知识getClass()、class()、forName()getConstructors()、getDeclaredConstructors()、getConstructor()、getDeclaredConstructor()getMethods()、getDeclaredMethods()、getMethod()、getDeclaredMethod()getField">
-<meta property="og:updated_time" content="2021-08-18T15:45:31.688Z">
+<meta property="og:description" content="本文主要讲解反射的相关知识  一.获取类对象 getClass()，class()，forName()  1.获取类对象可以使用以下三种方法 对象名调用getClass()方法 类名调用class()方法 Class调用forName()方法，参数是类所在的文件相对路径  例子：Peo类 123456789101112131415161718192021222324252627282930313">
+<meta property="og:updated_time" content="2021-08-26T23:46:04.974Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java知识之反射">
-<meta name="twitter:description" content="本文主要讲解反射的相关知识getClass()、class()、forName()getConstructors()、getDeclaredConstructors()、getConstructor()、getDeclaredConstructor()getMethods()、getDeclaredMethods()、getMethod()、getDeclaredMethod()getField">
+<meta name="twitter:description" content="本文主要讲解反射的相关知识  一.获取类对象 getClass()，class()，forName()  1.获取类对象可以使用以下三种方法 对象名调用getClass()方法 类名调用class()方法 Class调用forName()方法，参数是类所在的文件相对路径  例子：Peo类 123456789101112131415161718192021222324252627282930313">
 
 
 
@@ -349,6 +350,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categorys/Java知识/" itemprop="url" rel="index">
+                    <span itemprop="name">Java知识</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -404,9 +427,12 @@
 
       
         <blockquote>
-<p>本文主要讲解反射的相关知识<br><code>getClass()</code>、<code>class()</code>、<code>forName()</code><br><code>getConstructors()</code>、<code>getDeclaredConstructors()</code>、<code>getConstructor()</code>、<code>getDeclaredConstructor()</code><br><code>getMethods()</code>、<code>getDeclaredMethods()</code>、<code>getMethod()</code>、<code>getDeclaredMethod()</code><br><code>getFields()</code>、<code>getDeclaredFields()</code>、<code>getField()</code>、<code>getDeclaredField()</code></p>
+<p>本文主要讲解反射的相关知识</p>
 </blockquote>
-<h3 id="一-获取类对象"><a href="#一-获取类对象" class="headerlink" title="一.获取类对象"></a>一.获取类对象</h3><h4 id="1-获取类对象可以使用以下三种方法"><a href="#1-获取类对象可以使用以下三种方法" class="headerlink" title="1.获取类对象可以使用以下三种方法"></a>1.获取类对象可以使用以下三种方法</h4><ul>
+<h3 id="一-获取类对象"><a href="#一-获取类对象" class="headerlink" title="一.获取类对象"></a>一.获取类对象</h3><ul>
+<li><code>getClass()</code>，<code>class()</code>，<code>forName()</code></li>
+</ul>
+<h4 id="1-获取类对象可以使用以下三种方法"><a href="#1-获取类对象可以使用以下三种方法" class="headerlink" title="1.获取类对象可以使用以下三种方法"></a>1.获取类对象可以使用以下三种方法</h4><ul>
 <li>对象名调用getClass()方法</li>
 <li>类名调用class()方法</li>
 <li>Class调用forName()方法，参数是类所在的文件相对路径</li>
@@ -415,7 +441,10 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Peo</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> String name;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">double</span> heigth;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">double</span> weight;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> age;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.age = age;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getHeigth</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> heigth;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setHeigth</span><span class="params">(<span class="keyword">double</span> heigth)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.heigth = heigth;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getWeight</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> weight;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setWeight</span><span class="params">(<span class="keyword">double</span> weight)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.weight = weight;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"peo is running"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">        System.out.println(name + <span class="string">" is running"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">(String name, String age)</span> </span>&#123;</div><div class="line">        System.out.println(name + <span class="string">" is running , "</span> + name + <span class="string">" is "</span> + age);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">(String name, String age, <span class="keyword">double</span> heigth)</span> </span>&#123;</div><div class="line">        System.out.println(name + <span class="string">" is running , "</span> + name + <span class="string">" is "</span> + age + <span class="string">" , "</span> + name + <span class="string">" is "</span> + heigth);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">walk</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"单参方法: "</span> + name + <span class="string">" is walking"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">jump</span><span class="params">()</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"无参方法: "</span> + <span class="string">"Peo is jumping"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 无参构造方法</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Peo</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 单个参数构造方法，私有</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Peo</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.age = age;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 单个参数构造方法，受保护的</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="title">Peo</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 单个参数构造方法，默认不修饰</span></div><div class="line">    Peo(doubleweight) &#123;</div><div class="line">        <span class="keyword">this</span>.weight = weight;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 多参构造方法</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Peo</span><span class="params">(String name, <span class="keyword">int</span> age, <span class="keyword">double</span> heigth, <span class="keyword">double</span> weight)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">        <span class="keyword">this</span>.age = age;</div><div class="line">        <span class="keyword">this</span>.heigth = heigth;</div><div class="line">        <span class="keyword">this</span>.weight = weight;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>方法调用</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Peo peo = <span class="keyword">new</span> Peo();</div><div class="line"><span class="comment">// 对象名.getClass</span></div><div class="line">Class c1 = peo.getClass();</div><div class="line"><span class="comment">// 类名.class</span></div><div class="line">Class c2 = Peo.class;</div><div class="line"><span class="comment">// Class.forName("类所在的文件相对路径")</span></div><div class="line">Class c3 = Class.forName(<span class="string">"com.Case.Peo"</span>);</div></pre></td></tr></table></figure>
-<h3 id="二-获取类的构造方法"><a href="#二-获取类的构造方法" class="headerlink" title="二.获取类的构造方法"></a>二.获取类的构造方法</h3><h4 id="1-获取类的多个构造方法"><a href="#1-获取类的多个构造方法" class="headerlink" title="1.获取类的多个构造方法"></a>1.获取类的多个构造方法</h4><ul>
+<h3 id="二-获取类的构造方法"><a href="#二-获取类的构造方法" class="headerlink" title="二.获取类的构造方法"></a>二.获取类的构造方法</h3><ul>
+<li><code>getConstructors()</code>、<code>getDeclaredConstructors()</code>、<code>getConstructor()</code>、<code>getDeclaredConstructor()</code></li>
+</ul>
+<h4 id="1-获取类的多个构造方法"><a href="#1-获取类的多个构造方法" class="headerlink" title="1.获取类的多个构造方法"></a>1.获取类的多个构造方法</h4><ul>
 <li>类对象调用getConstructors()方法 <code>获取多个public修饰的构造方法</code></li>
 <li>类对象调用getDeclaredConstructors()方法 <code>获取多个public、protected、private、和default修饰的构造方法</code></li>
 </ul>
@@ -436,7 +465,10 @@
 <p>打印结果</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">有参构造方法: <span class="keyword">private</span> com.Case.Peo(<span class="keyword">int</span>)</div></pre></td></tr></table></figure>
 <p>注意：当构造方法是public修饰，使用getConstructor()或getDeclaredConstructor()都可以，其他修饰符，使用getDeclaredConstructor()获取构造方法，如果构造方法参数是<code>int</code>，方法中的参数为<code>int.class</code>，如果构造方法参数是<code>String</code>，方法中的参数为<code>String.class</code>，如果构造方法是<code>public Peo(String name, int age, double heigth, double weight)</code>，<br>调用示例为：getDeclaredConstructor(“<code>String.class, int.class, double.class, double.class</code>“)</p>
-<h3 id="三-获取类的方法"><a href="#三-获取类的方法" class="headerlink" title="三.获取类的方法"></a>三.获取类的方法</h3><h4 id="1-获取类的多个方法"><a href="#1-获取类的多个方法" class="headerlink" title="1.获取类的多个方法"></a>1.获取类的多个方法</h4><ul>
+<h3 id="三-获取类的方法"><a href="#三-获取类的方法" class="headerlink" title="三.获取类的方法"></a>三.获取类的方法</h3><ul>
+<li><code>getMethods()</code>、<code>getDeclaredMethods()</code>、<code>getMethod()</code>、<code>getDeclaredMethod()</code></li>
+</ul>
+<h4 id="1-获取类的多个方法"><a href="#1-获取类的多个方法" class="headerlink" title="1.获取类的多个方法"></a>1.获取类的多个方法</h4><ul>
 <li>类对象调用getMethods()方法 <code>获取多个public修饰的方法、继承类的public修饰的方法和该类所实现接口的方法</code></li>
 <li>类对象调用getDeclaredMethods()方法 <code>获取多个public、protect、private、default修饰的方法和该类所实现接口的方法</code></li>
 </ul>
@@ -456,7 +488,10 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Peo peo = <span class="keyword">new</span> Peo();</div><div class="line">Class c1= peo.getClass();</div><div class="line"><span class="comment">// 获取有参的walk方法</span></div><div class="line">Method methodW = c1.getMethod(<span class="string">"walk"</span>, String.class);</div><div class="line"><span class="comment">// 调用walk方法</span></div><div class="line">methodW.invoke(peo, <span class="string">"xile"</span>);</div></pre></td></tr></table></figure>
 <p>打印结果</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">有参方法: xile is walking</div></pre></td></tr></table></figure>
-<h3 id="四-获取类的成员变量"><a href="#四-获取类的成员变量" class="headerlink" title="四.获取类的成员变量"></a>四.获取类的成员变量</h3><h4 id="1-获取类的多个成员变量"><a href="#1-获取类的多个成员变量" class="headerlink" title="1.获取类的多个成员变量"></a>1.获取类的多个成员变量</h4><ul>
+<h3 id="四-获取类的成员变量"><a href="#四-获取类的成员变量" class="headerlink" title="四.获取类的成员变量"></a>四.获取类的成员变量</h3><ul>
+<li><code>getFields()</code>、<code>getDeclaredFields()</code>、<code>getField()</code>、<code>getDeclaredField()</code></li>
+</ul>
+<h4 id="1-获取类的多个成员变量"><a href="#1-获取类的多个成员变量" class="headerlink" title="1.获取类的多个成员变量"></a>1.获取类的多个成员变量</h4><ul>
 <li>类对象调用getFields()方法 <code>获取多个public修饰的成员变量</code></li>
 <li>类对象调用getDeclaredFields()方法 <code>获取多个public、protect、private、default修饰的成员变量</code></li>
 </ul>
@@ -503,6 +538,14 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/反射/" rel="tag"># 反射</a>
+          
+        </div>
       
 
       
@@ -628,7 +671,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -639,7 +682,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
