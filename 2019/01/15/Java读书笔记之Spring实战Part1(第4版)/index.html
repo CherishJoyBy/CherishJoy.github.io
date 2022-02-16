@@ -96,13 +96,13 @@
 <meta name="description" content="本文主要介绍了Spring的相关知识.  一.Spring的概念.Spring是一个开源框架,是为了解决企业应用开发的复杂性而创建.Spring的根本使命:简化Java开发.具体简化策略:  基于POJO的轻量级和最小侵入性编程. 通过依赖注入和面向接口实现松耦合. 基于切面和惯例进行声明式编程. 通过切面和模板减少样板式代码.  1.POJOPOJO(Plain Ordinary Java O">
 <meta name="keywords" content="读书笔记,Spring">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS读书笔记之Spring实战Part1(第4版)">
-<meta property="og:url" content="http://cherishJoy.com/2019/01/15/Java读书笔记之Spring实战Part1(第4版)/index.html">
+<meta property="og:title" content="java读书笔记之Spring实战Part1(第4版)">
+<meta property="og:url" content="http://cherishJoy.com/2019/01/15/java读书笔记之Spring实战Part1(第4版)/index.html">
 <meta property="og:site_name" content="CherishJoy">
 <meta property="og:description" content="本文主要介绍了Spring的相关知识.  一.Spring的概念.Spring是一个开源框架,是为了解决企业应用开发的复杂性而创建.Spring的根本使命:简化Java开发.具体简化策略:  基于POJO的轻量级和最小侵入性编程. 通过依赖注入和面向接口实现松耦合. 基于切面和惯例进行声明式编程. 通过切面和模板减少样板式代码.  1.POJOPOJO(Plain Ordinary Java O">
-<meta property="og:updated_time" content="2022-02-16T17:35:19.431Z">
+<meta property="og:updated_time" content="2022-02-16T17:52:07.808Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS读书笔记之Spring实战Part1(第4版)">
+<meta name="twitter:title" content="java读书笔记之Spring实战Part1(第4版)">
 <meta name="twitter:description" content="本文主要介绍了Spring的相关知识.  一.Spring的概念.Spring是一个开源框架,是为了解决企业应用开发的复杂性而创建.Spring的根本使命:简化Java开发.具体简化策略:  基于POJO的轻量级和最小侵入性编程. 通过依赖注入和面向接口实现松耦合. 基于切面和惯例进行声明式编程. 通过切面和模板减少样板式代码.  1.POJOPOJO(Plain Ordinary Java O">
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://cherishJoy.com/2019/01/15/Java读书笔记之Spring实战Part1(第4版)/"/>
+  <link rel="canonical" href="http://cherishJoy.com/2019/01/15/java读书笔记之Spring实战Part1(第4版)/"/>
 
 
 
 
 
-  <title>iOS读书笔记之Spring实战Part1(第4版) | CherishJoy</title>
+  <title>java读书笔记之Spring实战Part1(第4版) | CherishJoy</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -310,7 +310,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://cherishJoy.com/2019/01/15/Java读书笔记之Spring实战Part1(第4版)/">
+    <link itemprop="mainEntityOfPage" href="http://cherishJoy.com/2019/01/15/java读书笔记之Spring实战Part1(第4版)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cherishJoy">
@@ -327,7 +327,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">iOS读书笔记之Spring实战Part1(第4版)</h1>
+          <h1 class="post-title" itemprop="name headline">java读书笔记之Spring实战Part1(第4版)</h1>
         
 
         <div class="post-meta">
@@ -362,8 +362,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categorys/Java读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">Java读书笔记</span>
+                  <a href="/categorys/java读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">java读书笔记</span>
                   </a>
                 </span>
 
@@ -379,7 +379,7 @@
 
           
           
-             <span id="/2019/01/15/Java读书笔记之Spring实战Part1(第4版)/" class="leancloud_visitors" data-flag-title="iOS读书笔记之Spring实战Part1(第4版)">
+             <span id="/2019/01/15/java读书笔记之Spring实战Part1(第4版)/" class="leancloud_visitors" data-flag-title="java读书笔记之Spring实战Part1(第4版)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -449,23 +449,27 @@
 </ul>
 <h4 id="1-应用上下文"><a href="#1-应用上下文" class="headerlink" title="1.应用上下文"></a>1.应用上下文</h4><p>Spring中自带的多种应用上下文,分别为:</p>
 <ul>
-<li><p>AnnotationConfigApplicationContext:<br>从一个或多个基于Java的配置类中加载Spring应用上下文<br>例子:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ApplicationContext context = new AnnotationConfigApplicationContext(com.springinaction.knights.config.KnightConfig.class);</div></pre></td></tr></table></figure>
+<li><p>AnnotationConfigApplicationContext:<br>  从一个或多个基于Java的配置类中加载Spring应用上下文</p>
+<p>  例子:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ApplicationContext context = new AnnotationConfigApplicationContext(com.springinaction.knights.config.KnightConfig.class);</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
-<li>AnnotationConfigWebApplicationContext:<br>从一个或多个基于Java的配置类中加载Spring Web应用上下文</li>
-<li><p>ClassPathXmlApplicationContext:<br>从类路径下的一个或多个XML配置文件中加载上下文定义,把应用上下文的定义文件作为类资源.<br>例子:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ApplicationContext context = new ClassPathXmlApplicationContext(knight.xml);</div></pre></td></tr></table></figure>
+<li><p>AnnotationConfigWebApplicationContext:<br>  从一个或多个基于Java的配置类中加载Spring Web应用上下文</p>
+</li>
+<li><p>ClassPathXmlApplicationContext:<br>  从类路径下的一个或多个XML配置文件中加载上下文定义,把应用上下文的定义文件作为类资源.</p>
+<p>  例子:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ApplicationContext context = new ClassPathXmlApplicationContext(knight.xml);</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
-<li><p>FileSystemXmlApplicationContext:<br>从文件系统下的一个或多个XML配置文件中加载上下文定义<br>例子:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ApplicationContext context = new FileSystemXmlApplicationContext(c:/knight.xml);</div></pre></td></tr></table></figure>
+<li><p>FileSystemXmlApplicationContext:<br>  从文件系统下的一个或多个XML配置文件中加载上下文定义</p>
+<p>  例子:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ApplicationContext context = new FileSystemXmlApplicationContext(c:/knight.xml);</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
-<li>XmlWebApplicationContext:<br>从Web应用下的一个或多个XML配置文件中加载上下文定义</li>
+<li>XmlWebApplicationContext:<br>  从Web应用下的一个或多个XML配置文件中加载上下文定义</li>
 </ul>
 <h4 id="2-bean生命周期"><a href="#2-bean生命周期" class="headerlink" title="2.bean生命周期."></a>2.bean生命周期.</h4><ul>
 <li>Spring对bean进行实例化.</li>
@@ -583,8 +587,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/03/Java知识之Lambda表达式/" rel="next" title="Java知识之Lambda表达式">
-                <i class="fa fa-chevron-left"></i> Java知识之Lambda表达式
+              <a href="/2018/09/03/java知识之Lambda表达式/" rel="next" title="java知识之Lambda表达式">
+                <i class="fa fa-chevron-left"></i> java知识之Lambda表达式
               </a>
             
           </div>
@@ -593,8 +597,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/17/Java开发之Linux常用命令/" rel="prev" title="Java开发之Linux常用命令">
-                Java开发之Linux常用命令 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/17/java开发之Linux常用命令/" rel="prev" title="java开发之Linux常用命令">
+                java开发之Linux常用命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
