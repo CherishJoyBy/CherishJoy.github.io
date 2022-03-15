@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[aaa.md]]></title>
+    <url>%2F2022%2F03%2F16%2Faaa-md%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[java开发之Swagger集成]]></title>
     <url>%2F2021%2F07%2F13%2Fjava%E5%BC%80%E5%8F%91%E4%B9%8BSwagger%E9%9B%86%E6%88%90%2F</url>
     <content type="text"><![CDATA[本文介绍了swagger3.0集成，并生成api文档 一.pom中添加spring-boot-starter-mail依赖依赖如下： 123456&lt;!--swagger api文档--&gt;&lt;dependency&gt; &lt;groupId&gt;io.springfox&lt;/groupId&gt; &lt;artifactId&gt;springfox-boot-starter&lt;/artifactId&gt; &lt;version&gt;3.0.0&lt;/version&gt;&lt;/dependency&gt; 二.如果springboot版本是2.6的版本，和swagger的版本有冲突，在properties文件中添加以下配置1spring.mvc.pathmatch.matching-strategy=ANT_PATH_MATCHER 三.添加测试类类和测试接口12345678910111213141516171819202122232425262728@RestController@Api(tags = "API测试接口")public class InfoController &#123; @ApiOperation("增加操作") @PostMapping(value = "/inset") public void insert() &#123; System.out.println("增加操作"); &#125; @ApiOperation("查询操作") @GetMapping(value = "/select") public void select() &#123; System.out.println("查询操作"); &#125; @ApiOperation("删除操作") @PostMapping(value = "/delete") public void delete() &#123; System.out.println("删除操作"); &#125; @ApiOperation("更改操作") @PostMapping(value = "/update") public void update() &#123; System.out.println("更改操作"); &#125;&#125; 四.添加swagger配置类123456789101112131415161718@Configurationpublic class Swagger2Configuration &#123; @Bean public Docket buildDocket() &#123; return new Docket(DocumentationType.OAS_30) .apiInfo(apiInfo()) .select() .build(); &#125; // API基础信息（Swagger默认页面的信息） private ApiInfo apiInfo() &#123; return new ApiInfoBuilder() .title("Swagger3接口文档") .build(); &#125;&#125; 五.结果访问swagger地址：http://localhost:58083/swagger-ui/index.html 如果是8080端口：http://localhost:8080/swagger-ui/index.html]]></content>
